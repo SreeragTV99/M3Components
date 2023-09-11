@@ -37,7 +37,8 @@
                 style="@style/Widget.Material3.Chip.Filter.Elevated"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Chip filter" />
+                android:text="Chip filter"
+                android:checked="true"/>
 
             <com.google.android.material.chip.Chip
                 style="@style/Widget.Material3.Chip.Input.Elevated"
