@@ -7,34 +7,43 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity5">
 
-        <com.google.android.material.progressindicator.LinearProgressIndicator
-            android:id="@+id/linearProgressBar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:foregroundGravity="center"
-            android:progress="70"
-            style="@style/Widget.Material3.LinearProgressIndicator"
-            android:indeterminate="true"
-            app:indicatorColor="@color/design_default_color_primary_variant"/>
+    <com.google.android.material.progressindicator.LinearProgressIndicator
+        android:id="@+id/linearProgressBar"
+        style="@style/Widget.Material3.LinearProgressIndicator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:foregroundGravity="center"
+        android:indeterminate="true"
+        android:progress="70"
+        app:indicatorColor="@color/design_default_color_primary_variant" />
 
-        <com.google.android.material.progressindicator.CircularProgressIndicator
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:progress="60"
-            style="@style/Widget.Material3.CircularProgressIndicator.Medium"
-            android:indeterminate="true"
-            app:indicatorColor="@color/design_default_color_primary_variant"
-            app:showAnimationBehavior="outward"/>
+    <com.google.android.material.progressindicator.CircularProgressIndicator
+        style="@style/Widget.Material3.CircularProgressIndicator.Medium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        android:progress="60"
+        app:indicatorColor="@color/design_default_color_primary_variant"
+        app:showAnimationBehavior="outward" />
 
-        <com.google.android.material.navigation.NavigationView
-            android:id="@+id/navigationView"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_gravity="start"
-            android:background="@android:color/white"
-            android:fitsSystemWindows="true"
-            android:overScrollMode="always"
-            app:menu="@menu/bottom_app_bar_menu"
-            app:showAnimationBehavior="outward" />
+
+    <RadioButton
+        android:id="@+id/radio_button_2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Radio Button"
+        />
+
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navigationView"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@android:color/white"
+        android:fitsSystemWindows="true"
+        android:overScrollMode="always"
+        app:menu="@menu/bottom_app_bar_menu"
+        app:showAnimationBehavior="outward" />
 
 </androidx.drawerlayout.widget.DrawerLayout>
