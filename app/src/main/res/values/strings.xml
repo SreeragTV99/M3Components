@@ -1,6 +1,10 @@
 <resources>
     <string name="app_name">M3Components</string>
     <string name="searchbar_hint">Search</string>
+    <string name="nav_open">Open</string>
+    <string name="nav_close">Close</string>
+    <string name="helper_text">*required</string>
+    <string name="password_helper_text">Atlmost 20 characters</string>
     <string-array name="programming_languages">
         <item>Java</item>
         <item>Kotlin</item>

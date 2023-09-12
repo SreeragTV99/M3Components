@@ -11,7 +11,7 @@
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layout_behavior="@string/searchbar_scrolling_view_behavior"/>
+        app:layout_behavior="@string/searchbar_scrolling_view_behavior" />
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
@@ -29,25 +29,26 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/searchbar_hint"
-        app:layout_anchor="@id/search_bar"/>
+        app:layout_anchor="@id/search_bar" />
 
     <com.google.android.material.slider.Slider
         android:id="@+id/sliderView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="80dp"
-        android:valueFrom="0.0"
         android:value="50.0"
+        android:valueFrom="0.0"
         android:valueTo="100.0"
-        />
+        android:pointerIcon="handwriting"/>
+
     <com.google.android.material.slider.Slider
         android:id="@+id/slider1View"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="120dp"
+        android:stepSize="10.0"
         android:valueFrom="0.0"
-        android:valueTo="100.0"
-        android:stepSize="10.0"/>
+        android:valueTo="100.0" />
 
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
