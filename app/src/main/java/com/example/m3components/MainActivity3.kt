@@ -1,24 +1,25 @@
 package com.example.m3components
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.ArrayAdapter
 import android.widget.AutoCompleteTextView
 import android.widget.Button
+import android.widget.LinearLayout
+import com.google.android.material.bottomsheet.BottomSheetBehavior
+import com.google.android.material.switchmaterial.SwitchMaterial
 
 class MainActivity3 : AppCompatActivity() {
+    private lateinit var bottomSheetBehavior: BottomSheetBehavior<LinearLayout>
+    private lateinit var bottomSheetWrapper: LinearLayout
+    private lateinit var showBottomSheetButton: Button
+    private lateinit var switchMaterial: SwitchMaterial
+    private var isBottomSheetVisible = false
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main3)
-
-        val Button = findViewById<Button>(R.id.bottomsheet_button)
-
-        Button.setOnClickListener {
-            val intent = Intent(this, MainActivity4::class.java)
-            startActivity(intent)
-        }
-
 
         // get reference to the string array that we just created
         val languages = resources.getStringArray(R.array.programming_languages)
@@ -29,5 +30,37 @@ class MainActivity3 : AppCompatActivity() {
         val autocompleteTV = findViewById<AutoCompleteTextView>(R.id.autoCompleteTextView)
         // set adapter to the autocomplete tv to the arrayAdapter
         autocompleteTV.setAdapter(arrayAdapter)
+
+
+        // Find views
+        bottomSheetBehavior = BottomSheetBehavior.from(findViewById(R.id.standard_bottom_sheet))
+        bottomSheetWrapper = findViewById(R.id.standard_bottom_sheet)
+        showBottomSheetButton = findViewById(R.id.showBottumSheet)
+        switchMaterial = findViewById(R.id.switchMaterial)
+
+        // Initially hide the entire bottom sheet wrapper
+        bottomSheetWrapper.visibility = View.GONE
+
+        // Set an onClickListener for the button to toggle the bottom sheet
+        showBottomSheetButton.setOnClickListener {
+            if (isBottomSheetVisible) {
+                // If the bottom sheet is visible, hide it
+                bottomSheetWrapper.visibility = View.GONE
+                isBottomSheetVisible = false
+            } else {
+                // If the bottom sheet is hidden, show it
+                bottomSheetWrapper.visibility = View.VISIBLE
+                isBottomSheetVisible = true
+            }
+        }
+
+        // Optionally, you can also toggle the visibility of the bottom sheet based on the switch state
+        switchMaterial.setOnCheckedChangeListener { _, isChecked ->
+            if (!isChecked) {
+                // Hide the bottom sheet if the switch is turned off
+                bottomSheetWrapper.visibility = View.GONE
+                isBottomSheetVisible = false
+            }
+        }
     }
 }

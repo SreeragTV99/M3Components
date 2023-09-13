@@ -5,6 +5,7 @@
     android:id="@+id/drawerLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
     tools:context=".MainActivity5">
 
     <com.google.android.material.progressindicator.LinearProgressIndicator
@@ -26,15 +27,6 @@
         app:indicatorColor="@color/design_default_color_primary_variant"
         app:showAnimationBehavior="outward" />
 
-
-    <RadioButton
-        android:id="@+id/radio_button_2"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Radio Button"
-        />
-
-
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/navigationView"
         android:layout_width="wrap_content"
@@ -43,7 +35,9 @@
         android:background="@android:color/white"
         android:fitsSystemWindows="true"
         android:overScrollMode="always"
+        app:headerLayout="@layout/drawer_header"
         app:menu="@menu/bottom_app_bar_menu"
-        app:showAnimationBehavior="outward" />
+        app:showAnimationBehavior="outward"
+        android:layout_marginTop="76dp"/>
 
 </androidx.drawerlayout.widget.DrawerLayout>

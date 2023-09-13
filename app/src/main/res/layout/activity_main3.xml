@@ -11,7 +11,16 @@
         style="?attr/colorPrimary"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="16dp"/>
+        android:padding="16dp" />
+
+    <Button
+        android:id="@+id/showBottumSheet"
+        style="@style/Widget.Material3.Button.ElevatedButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Show Bottom Sheet"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="50dp"/>
 
     <com.google.android.material.textfield.TextInputLayout
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
@@ -42,22 +51,63 @@
         <com.google.android.material.bottomsheet.BottomSheetDragHandleView
             android:id="@+id/drag_handle"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
-        <EditText
-            android:layout_width="328dp"
-            android:layout_height="46dp"
-            android:layout_marginBottom="8dp"
-            android:background="@drawable/rounded_rectangle"
-            android:hint="Enter anything"
-            android:paddingStart="8dp" />
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/bottomsheet_button"
-            style="@style/Widget.Material3.Button"
-            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Submit" />
+            android:backgroundTint="@color/colorPrimary"
+            />
+
+        <!--        <EditText-->
+        <!--            android:layout_width="328dp"-->
+        <!--            android:layout_height="46dp"-->
+        <!--            android:layout_marginBottom="8dp"-->
+        <!--            android:background="@drawable/rounded_rectangle"-->
+        <!--            android:hint="Enter anything"-->
+        <!--            android:paddingStart="8dp" />-->
+
+        <!--        <com.google.android.material.button.MaterialButton-->
+        <!--            android:id="@+id/bottomsheet_button"-->
+        <!--            style="@style/Widget.Material3.Button"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:text="Submit" />-->
+
+        <TextView
+            android:id="@+id/menu_item1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:clickable="true"
+            android:drawableStart="@drawable/baseline_share_24"
+            android:drawablePadding="15dp"
+            android:focusable="true"
+            android:padding="16dp"
+            android:text="Share" />
+
+        <TextView
+            android:id="@+id/menu_item2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="10dp"
+            android:clickable="true"
+            android:drawableStart="@drawable/baseline_insert_link_24"
+            android:drawablePadding="15dp"
+            android:focusable="true"
+            android:padding="16dp"
+            android:text="Get link" />
+
+        <TextView
+            android:id="@+id/menu_item3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="30dp"
+            android:clickable="true"
+            android:drawableStart="@drawable/baseline_delete_24"
+            android:drawablePadding="15dp"
+            android:focusable="true"
+            android:padding="16dp"
+            android:text="Delete" />
 
     </LinearLayout>
 
