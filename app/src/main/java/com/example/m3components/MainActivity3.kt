@@ -1,5 +1,6 @@
 package com.example.m3components
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -8,6 +9,7 @@ import android.widget.AutoCompleteTextView
 import android.widget.Button
 import android.widget.LinearLayout
 import com.google.android.material.bottomsheet.BottomSheetBehavior
+import com.google.android.material.button.MaterialButton
 import com.google.android.material.switchmaterial.SwitchMaterial
 
 class MainActivity3 : AppCompatActivity() {
@@ -20,6 +22,21 @@ class MainActivity3 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main3)
+
+        val nextButton = findViewById<MaterialButton>(R.id.nextScreen)
+
+        nextButton.setOnClickListener {
+            val intent = Intent(this, MainActivity4::class.java)
+            startActivity(intent)
+        }
+
+        val previousButton = findViewById<MaterialButton>(R.id.previousScreen)
+
+        previousButton.setOnClickListener {
+            val intent = Intent(this, MainActivity2::class.java)
+            startActivity(intent)
+        }
+
 
         // get reference to the string array that we just created
         val languages = resources.getStringArray(R.array.programming_languages)
