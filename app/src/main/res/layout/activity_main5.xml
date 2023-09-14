@@ -47,6 +47,17 @@
             app:iconGravity="end"
             android:layout_below="@+id/circularProgressBar"
             android:layout_centerHorizontal="true"/>
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/toMainActivity7"
+            style="@style/Widget.Material3.Button.ElevatedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="slidesheet"
+            app:icon="@drawable/baseline_navigate_next_24"
+            app:iconGravity="end"
+            android:layout_below="@+id/toMainActivity6"
+            android:layout_centerHorizontal="true"/>
 
     </RelativeLayout>
 

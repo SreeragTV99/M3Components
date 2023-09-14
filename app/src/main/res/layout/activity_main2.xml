@@ -122,6 +122,7 @@
                     android:text="Button 1" />
 
                 <com.google.android.material.button.MaterialButton
+                    android:id="@+id/showSnackbarButton"
                     style="?attr/materialButtonOutlinedStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"

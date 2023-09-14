@@ -10,6 +10,7 @@ import android.widget.TimePicker
 import android.widget.Toast
 import androidx.cardview.widget.CardView
 import com.google.android.material.appbar.AppBarLayout
+import com.google.android.material.badge.BadgeDrawable
 import com.google.android.material.card.MaterialCardView
 import com.google.android.material.datepicker.MaterialDatePicker
 import com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -85,5 +86,17 @@ class MainActivity4 : AppCompatActivity() {
                 textView.visibility = ViewGroup.VISIBLE
             }
         }
+
+
+//        // Find the FloatingActionButton by its ID
+//        val fab: FloatingActionButton = findViewById(R.id.floating_action_button_BadgeDrawable)
+//
+//        // Create a BadgeDrawable instance and attach it to the FloatingActionButton
+//        val badgeDrawable = BadgeDrawable.create(this)
+//        badgeDrawable.number = 3  // Set the badge count
+//
+//        // Attach the badge to the FloatingActionButton
+//        BadgeDrawable.attachBadgeDrawable(badgeDrawable, fab)
+
     }
 }

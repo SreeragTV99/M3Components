@@ -22,6 +22,13 @@ class MainActivity5 : AppCompatActivity() {
             startActivity(intent)
         }
 
+        val redirectButton = findViewById<Button>(R.id.toMainActivity7)
+
+        redirectButton.setOnClickListener {
+            val intent = Intent(this, MainActivity7::class.java)
+            startActivity(intent)
+        }
+
         drawerLayout = findViewById(R.id.drawerLayout)
         actionBarDrawerToggle = ActionBarDrawerToggle(this, drawerLayout, R.string.nav_open, R.string.nav_close)
 
