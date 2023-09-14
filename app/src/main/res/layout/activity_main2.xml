@@ -38,8 +38,8 @@
                 style="@style/Widget.Material3.Chip.Filter.Elevated"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Chip filter"
-                android:checked="true"/>
+                android:checked="true"
+                android:text="Chip filter" />
 
             <com.google.android.material.chip.Chip
                 style="@style/Widget.Material3.Chip.Input.Elevated"
@@ -55,9 +55,16 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
+        android:checkable="true"
+        android:clickable="true"
+        android:focusable="true"
+        app:cardElevation="1dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/chipGroup">
+        app:layout_constraintTop_toBottomOf="@+id/chipGroup"
+        app:rippleColor="@color/colorOnSurfaceVariant"
+        app:shapeAppearance="?attr/shapeAppearanceMediumComponent"
+        app:state_dragged="true">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -138,10 +145,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="User name"
-        app:endIconMode="clear_text"
-        app:helperTextEnabled="true"
-        app:helperText="@string/helper_text"
         android:padding="8dp"
+        app:endIconMode="clear_text"
+        app:helperText="@string/helper_text"
+        app:helperTextEnabled="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/card">
@@ -160,11 +167,11 @@
         android:layout_height="wrap_content"
         android:hint="Password"
         android:padding="8dp"
-        app:endIconMode="password_toggle"
-        app:helperTextEnabled="true"
-        app:helperText="@string/password_helper_text"
         app:counterEnabled="true"
         app:counterMaxLength="20"
+        app:endIconMode="password_toggle"
+        app:helperText="@string/password_helper_text"
+        app:helperTextEnabled="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/userName">
@@ -174,8 +181,7 @@
             style="@style/ThemeOverlay.Material3.TextInputEditText.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textPassword"
-            />
+            android:inputType="textPassword" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -194,7 +200,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="none"
-            app:simpleItems="@array/programming_languages"/>
+            app:simpleItems="@array/programming_languages" />
     </com.google.android.material.textfield.TextInputLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
