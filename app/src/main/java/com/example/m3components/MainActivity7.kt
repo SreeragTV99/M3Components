@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.ImageButton
 import com.google.android.material.sidesheet.SideSheetBehavior
 
 class MainActivity7 : AppCompatActivity() {
@@ -16,6 +17,7 @@ class MainActivity7 : AppCompatActivity() {
 
         showSlideSheet=findViewById(R.id.showSideSheet)
         val bottomSheetBehavior =SideSheetBehavior.from(findViewById(R.id.standard_slide_sheet))
+        val backButton: ImageButton = findViewById(R.id.backbutton)
 
         showSlideSheet.setOnClickListener {
             if (bottomSheetBehavior.state == SideSheetBehavior.STATE_HIDDEN) {
@@ -23,6 +25,9 @@ class MainActivity7 : AppCompatActivity() {
             } else {
                 bottomSheetBehavior.state = SideSheetBehavior.STATE_HIDDEN
             }
+        }
+        backButton.setOnClickListener {
+            bottomSheetBehavior.state = SideSheetBehavior.STATE_HIDDEN
         }
     }
 }
