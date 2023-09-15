@@ -8,6 +8,7 @@ import android.widget.ArrayAdapter
 import android.widget.AutoCompleteTextView
 import android.widget.Button
 import android.widget.LinearLayout
+import androidx.appcompat.app.AppCompatDelegate
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.google.android.material.button.MaterialButton
 import com.google.android.material.switchmaterial.SwitchMaterial
@@ -71,12 +72,13 @@ class MainActivity3 : AppCompatActivity() {
             }
         }
 
-        // Optionally, you can also toggle the visibility of the bottom sheet based on the switch state
         switchMaterial.setOnCheckedChangeListener { _, isChecked ->
-            if (!isChecked) {
-                // Hide the bottom sheet if the switch is turned off
-                bottomSheetWrapper.visibility = View.GONE
-                isBottomSheetVisible = false
+            if (isChecked) {
+                // Switch is checked, enable Dark Theme
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+            } else {
+                // Switch is not checked, use the default theme (usually light theme)
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
             }
         }
     }
