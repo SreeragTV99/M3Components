@@ -50,4 +50,6 @@ dependencies {
     implementation("androidx.compose.material3:material3:1.2.0-alpha07")
     implementation("com.github.bumptech.glide:glide:4.11.0")
     annotationProcessor("com.github.bumptech.glide:compiler:4.11.0")
+
+    implementation ("ru.tinkoff.scrollingpagerindicator:scrollingpagerindicator:1.2.5")
 }

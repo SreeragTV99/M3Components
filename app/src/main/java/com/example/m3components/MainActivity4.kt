@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.ViewGroup
+import android.view.ViewStub
 import android.widget.Button
 import android.widget.TextView
 import android.widget.TimePicker
@@ -11,6 +12,7 @@ import android.widget.Toast
 import androidx.cardview.widget.CardView
 import com.google.android.material.appbar.AppBarLayout
 import com.google.android.material.badge.BadgeDrawable
+import com.google.android.material.button.MaterialButton
 import com.google.android.material.card.MaterialCardView
 import com.google.android.material.datepicker.MaterialDatePicker
 import com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -20,6 +22,8 @@ import java.util.Date
 class MainActivity4 : AppCompatActivity() {
 
     private lateinit var btnDatePicker: FloatingActionButton
+    private var isViewStubInflated = false
+    private lateinit var viewStub: ViewStub
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main4)
@@ -97,6 +101,15 @@ class MainActivity4 : AppCompatActivity() {
 //
 //        // Attach the badge to the FloatingActionButton
 //        BadgeDrawable.attachBadgeDrawable(badgeDrawable, fab)
+
+        viewStub = findViewById(R.id.viewStub)
+
+        findViewById<MaterialButton>(R.id.inflateButton).setOnClickListener {
+            if (!isViewStubInflated) {
+                viewStub.inflate()
+                isViewStubInflated = true
+            }
+        }
 
     }
 }

@@ -1,18 +1,24 @@
 package com.example.m3components
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import ru.tinkoff.scrollingpagerindicator.ScrollingPagerIndicator
 
 class MainActivity : AppCompatActivity() {
+    private lateinit var indicator: ScrollingPagerIndicator
+    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
         val redirectButton = findViewById<View>(R.id.floating_action_button)
+        indicator=findViewById(R.id.indicator)
 
         redirectButton.setOnClickListener {
             val intent = Intent(this, MainActivity2::class.java)
@@ -35,5 +41,11 @@ class MainActivity : AppCompatActivity() {
         // Create an adapter and set it to the RecyclerView
         val adapter = CarouselAdapter(imageList)
         recyclerView.adapter = adapter
+
+
+        indicator.attachToRecyclerView(recyclerView)
+        indicator.dotColor = ContextCompat.getColor(this, R.color.dot_unselected_color)
+        indicator.selectedDotColor = ContextCompat.getColor(this, R.color.dot_selected_color)
+        indicator.setDotCount(6)
     }
 }

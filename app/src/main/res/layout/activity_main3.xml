@@ -18,35 +18,36 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp">
-    <Button
-        android:id="@+id/showBottumSheet"
-        style="@style/Widget.Material3.Button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Show Bottom Sheet"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/nextScreen"
-        style="@style/Widget.Material3.Button"
-        android:layout_width="110dp"
-        android:layout_height="wrap_content"
-        android:text="Next"
-        app:layout_constraintStart_toEndOf="@id/showBottumSheet"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        <com.google.android.material.button.MaterialButtonToggleGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/previousScreen"
-        style="@style/Widget.Material3.Button"
-        android:layout_width="110dp"
-        android:layout_height="wrap_content"
-        android:text="Previous"
-        app:layout_constraintEnd_toStartOf="@id/showBottumSheet"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/previousScreen"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Back"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/showBottumSheet"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bottum sheet" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/nextScreen"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Next"/>
+        </com.google.android.material.button.MaterialButtonToggleGroup>
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

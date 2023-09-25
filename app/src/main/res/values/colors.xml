@@ -4,4 +4,7 @@
     <color name="white">#FFFFFFFF</color>
     <color name="colorPrimary">#6750A3</color>
     <color name="colorOnSurfaceVariant">#346750A3</color>
+
+    <color name="dot_selected_color">#03320F</color>
+    <color name="dot_unselected_color">#373535</color>
 </resources>

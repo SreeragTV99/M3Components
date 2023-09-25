@@ -16,7 +16,7 @@ import com.google.android.material.switchmaterial.SwitchMaterial
 class MainActivity3 : AppCompatActivity() {
     private lateinit var bottomSheetBehavior: BottomSheetBehavior<LinearLayout>
     private lateinit var bottomSheetWrapper: LinearLayout
-    private lateinit var showBottomSheetButton: Button
+    private lateinit var showBottomSheetButton: MaterialButton
     private lateinit var switchMaterial: SwitchMaterial
     private var isBottomSheetVisible = false
 
