@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.google.android.material.button.MaterialButton
 import ru.tinkoff.scrollingpagerindicator.ScrollingPagerIndicator
 
 class MainActivity : AppCompatActivity() {
@@ -47,5 +48,12 @@ class MainActivity : AppCompatActivity() {
         indicator.dotColor = ContextCompat.getColor(this, R.color.dot_unselected_color)
         indicator.selectedDotColor = ContextCompat.getColor(this, R.color.dot_selected_color)
         indicator.setDotCount(6)
+
+        val webViewButton = findViewById<MaterialButton>(R.id.webViewButton)
+
+        webViewButton.setOnClickListener {
+            val intent = Intent(this, MainActivity8::class.java)
+            startActivity(intent)
+        }
     }
 }
