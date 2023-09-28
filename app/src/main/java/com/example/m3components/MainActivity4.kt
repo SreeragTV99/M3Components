@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.ViewGroup
 import android.view.ViewStub
 import android.widget.Button
+import android.widget.CheckedTextView
 import android.widget.TextView
 import android.widget.TimePicker
 import android.widget.Toast
@@ -108,6 +109,27 @@ class MainActivity4 : AppCompatActivity() {
             if (!isViewStubInflated) {
                 viewStub.inflate()
                 isViewStubInflated = true
+            }
+        }
+
+        val CheckedTView = findViewById<CheckedTextView>(R.id.ctv)
+        if(CheckedTView != null){
+            CheckedTView.isChecked = false
+            CheckedTView.setCheckMarkDrawable(android.R.drawable.checkbox_off_background)
+            CheckedTView.setOnClickListener{
+                CheckedTView.isChecked = !CheckedTView.isChecked
+                CheckedTView.setCheckMarkDrawable(
+                    if(CheckedTView.isChecked)
+                        android.R.drawable.checkbox_on_background
+                    else
+                        android.R.drawable.checkbox_off_background
+                )
+
+                val msg = getString(R.string.msg_shown)+ "" +
+                        getString(if (CheckedTView.isChecked)
+                                    R.string.checked
+                                else R.string.unchecked)
+                Toast.makeText(this@MainActivity4, msg, Toast.LENGTH_SHORT).show()
             }
         }
 

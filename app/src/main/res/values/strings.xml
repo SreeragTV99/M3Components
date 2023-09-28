@@ -11,4 +11,8 @@
         <item>Python</item>
         <item>CPP</item>
     </string-array>
+    <string name="msg_shown">CTView is:</string>
+    <string name="checked">checked</string>
+    <string name="unchecked">unchecked</string>
+    <string name="checkedTextView">CheckedTextView</string>
 </resources>
