@@ -6,29 +6,42 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity8">
 
+    <com.google.android.material.progressindicator.LinearProgressIndicator
+        android:id="@+id/linearProgressIndicator"
+        style="@style/Widget.Material3.LinearProgressIndicator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:foregroundGravity="center"
+        android:indeterminate="true"
+        android:progress="100"
+        app:indicatorColor="@color/design_default_color_primary_variant"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <WebView
         android:id="@+id/webView"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/termsnconditions"/>
+        app:layout_constraintBottom_toTopOf="@+id/termsnconditions"
+        app:layout_constraintTop_toBottomOf="@+id/linearProgressIndicator"
+        tools:layout_editor_absoluteX="0dp" />
 
     <ToggleButton
         android:id="@+id/termsnconditions"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@null"
-        android:textAllCaps="false"
-        android:button="@drawable/tnc_checkbox_bg"
-        android:textOff="I Agree terms and conditions"
-        android:textOn="I Agreed terms and conditions"
         android:layout_marginStart="24dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="24dp"
         android:layout_marginBottom="8dp"
+        android:background="@null"
+        android:button="@drawable/tnc_checkbox_bg"
         android:textAlignment="viewStart"
-        app:layout_constraintStart_toStartOf="parent"
+        android:textAllCaps="false"
+        android:textOff="I Agree terms and conditions"
+        android:textOn="I Agreed terms and conditions"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"/>
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
