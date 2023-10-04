@@ -7,13 +7,17 @@ import android.os.Handler
 import android.view.View
 import android.view.animation.AnimationUtils
 import android.widget.Button
+import android.widget.GridView
 import android.widget.ImageButton
 import android.widget.TextView
+import com.example.m3components.adapter.CourseAdapter
+import com.example.m3components.model.CourseModel
 import com.google.android.material.button.MaterialButton
 import com.google.android.material.sidesheet.SideSheetBehavior
 
 class MainActivity7 : AppCompatActivity() {
     private lateinit var showSlideSheet: Button
+    private lateinit var coursesGV: GridView
 
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -80,5 +84,19 @@ class MainActivity7 : AppCompatActivity() {
             val animationRotate = AnimationUtils.loadAnimation(this, R.anim.rotate)
             textView.startAnimation(animationRotate)
         }
+
+        coursesGV = findViewById(R.id.gridView)
+        val courseModelArrayList: ArrayList<CourseModel> = ArrayList<CourseModel>()
+
+        courseModelArrayList.add(CourseModel("DSA", R.drawable.components))
+        courseModelArrayList.add(CourseModel("JAVA", R.drawable.components))
+        courseModelArrayList.add(CourseModel("C++", R.drawable.components))
+        courseModelArrayList.add(CourseModel("Python", R.drawable.components))
+        courseModelArrayList.add(CourseModel("Javascript", R.drawable.components))
+        courseModelArrayList.add(CourseModel("DSA", R.drawable.components))
+
+        val adapter = CourseAdapter(this, courseModelArrayList)
+        coursesGV.adapter = adapter
+
     }
 }

@@ -73,24 +73,26 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <TextView
-                android:id="@+id/textView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="Animation"
-                android:textColor="@color/colorPrimary"
-                android:textSize="32sp"
-                android:textStyle="bold" />
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="16dp">
 
             <LinearLayout
                 android:id="@+id/linearLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
                 android:layout_alignParentBottom="true"
                 android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Animation"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="32sp"
+                    android:textStyle="bold" />
 
                 <com.google.android.material.button.MaterialButtonToggleGroup
                     android:layout_width="wrap_content"
@@ -101,7 +103,7 @@
                         style="@style/Widget.MaterialComponents.Button.OutlinedButton"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        app:icon="@drawable/baseline_format_align_center_24"/>
+                        app:icon="@drawable/baseline_format_align_center_24" />
 
                     <com.google.android.material.button.MaterialButton
                         style="@style/Widget.MaterialComponents.Button.OutlinedButton"
@@ -113,7 +115,7 @@
                         style="@style/Widget.MaterialComponents.Button.OutlinedButton"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        app:icon="@drawable/baseline_format_align_right_24"/>
+                        app:icon="@drawable/baseline_format_align_right_24" />
                 </com.google.android.material.button.MaterialButtonToggleGroup>
 
 
@@ -216,6 +218,19 @@
                         android:text="Rotate"
                         android:textAllCaps="false" />
                 </LinearLayout>
+
+                <GridView
+                    android:id="@+id/gridView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:columnWidth="100dp"
+                    android:gravity="center"
+                    android:horizontalSpacing="10dp"
+                    android:numColumns="2"
+                    android:paddingVertical="8dp"
+                    android:scrollbars="none"
+                    android:stretchMode="columnWidth"
+                    android:verticalSpacing="10dp" />
 
             </LinearLayout>
 
