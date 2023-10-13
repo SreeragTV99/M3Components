@@ -52,4 +52,6 @@ dependencies {
     annotationProcessor("com.github.bumptech.glide:compiler:4.11.0")
 
     implementation ("ru.tinkoff.scrollingpagerindicator:scrollingpagerindicator:1.2.5")
+
+    implementation("androidx.palette:palette:1.0.0")
 }

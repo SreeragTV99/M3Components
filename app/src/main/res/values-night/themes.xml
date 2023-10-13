@@ -2,6 +2,6 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.M3Components" parent="Theme.Material3.DayNight">
         <!-- Customize your dark theme here. -->
-         <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimary">#494747</item>
     </style>
 </resources>
