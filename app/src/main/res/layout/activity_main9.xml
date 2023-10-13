@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/backgroundCL"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#86BFE2"
+    tools:context=".MainActivity9">
+
+    <ImageView
+        android:id="@+id/cpaImageView"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="70dp"
+        android:src="@drawable/star1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/idLL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="16dp"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        app:layout_constraintTop_toBottomOf="@+id/cpaImageView">
+
+        <Button
+            android:id="@+id/changeImageBtn1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/chau_philomene_one"
+            android:text="Image 1"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/changeImageBtn2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/chau_philomene_one"
+            android:text="Image 2"
+            android:textAllCaps="false" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/idTVHead"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/chau_philomene_one"
+        android:padding="4dp"
+        android:text="Welcome to Colors Palette API"
+        android:textAlignment="center"
+        android:textSize="25sp"
+        app:layout_constraintTop_toBottomOf="@+id/idLL" />
+
+    <TextView
+        android:id="@+id/idTVGFG"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/idTVGFG"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/chau_philomene_one"
+        android:padding="4dp"
+        android:text="Good visual design is essential for a successful app, and color schemes are a primary component of design."
+        android:textAlignment="center"
+        app:layout_constraintTop_toBottomOf="@+id/idTVHead" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

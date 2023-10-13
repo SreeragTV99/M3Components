@@ -37,7 +37,6 @@ class MainActivity : AppCompatActivity() {
         imageList.add(R.drawable.carousel4)
         imageList.add(R.drawable.carousel5)
         imageList.add(R.drawable.carousel6)
-        // Add more image URLs as needed
 
         // Create an adapter and set it to the RecyclerView
         val adapter = CarouselAdapter(imageList)
@@ -53,6 +52,13 @@ class MainActivity : AppCompatActivity() {
 
         webViewButton.setOnClickListener {
             val intent = Intent(this, MainActivity8::class.java)
+            startActivity(intent)
+        }
+
+        val colorPaletteButton = findViewById<MaterialButton>(R.id.colorPaletteButton)
+
+        colorPaletteButton.setOnClickListener {
+            val intent = Intent(this, MainActivity9::class.java)
             startActivity(intent)
         }
     }
